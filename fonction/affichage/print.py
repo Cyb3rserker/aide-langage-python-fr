@@ -71,7 +71,8 @@ print "L'age de la majorité est", age_majorite, "ans en France et pas", pas_age
 On peut aussi afficher le résultat de fonction. Pour cette
 exemple, on va utiliser la fonction "type" qui permet de
 connaître le type de donnée d'une variable
-(voir aide/donnees/variables.py) :
+(voir aide/donnees/variables.py pour avoir des renseignements sur les variables en python et
+aide/fonction/affichage/type.py pour avoir des renseignements sur la fonction) :
 """
 print(type(age_majorite))
 print(type(pas_age_majorite))

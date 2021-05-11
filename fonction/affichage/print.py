@@ -7,6 +7,7 @@ sortie (canal de sortie ~= là où sortent les inforamtions du programme).
 On peut afficher du texte, des données et autres.
 """
 
+print("\n_____AFFICHAGE BASIQUE ET RETOUR A LA LIGNE_____\n")
 print("Je suis une ligne qui sera afficher dans le terminal.")
 # On met le texte que l'on veut afficher entre parenthèse.
 
@@ -27,6 +28,7 @@ Je suis aussi une phrase qui sera dans le terminal
  Et moi une qui sera retournée à la ligne.
 """
 
+print("\n_____AFFICHAGE DE VARIABLES SANS ET AVEC TEXTE_____\n")
 """
 On peut aussi afficher des variables
 (voir aide/donnees/variables.py) de la manière suivante :
@@ -67,6 +69,22 @@ là qui est sans les parenthèses :
 print "L'age de la majorité est", age_majorite, "ans en France et pas", pas_age_majorite, "ans"
 """
 
+print("\n_____AFFICHAGE DE VARIABLES DANS DU TEXTE FORAMTE_____\n")
+"""
+Ceci n'est pas la seule manière d'afficher du texte avec des variables. En effet, on peut
+afficher du texte formaté, c'est à dire du texte qui aura du contenu remplacé par des variables,
+du texte et autres en utilisant cette syntaxe (je reviendrai sûrement pour mieux expliquer cette
+syntaxe) :
+"""
+print("L'age de la majorité est {} ans en France et pas {} ans".format(age_majorite, pas_age_majorite))
+# Les accolades seront remlacés par les variables
+
+# On peut aussi le faire avec des variables de textes :
+
+texte = "L'age de la majorité est {} ans en France et pas {} ans"
+print(texte.format(age_majorite, pas_age_majorite))
+
+print("\n_____AFFICHAGE RETOUR FONCTION_____\n")
 """
 On peut aussi afficher le résultat de fonction. Pour cette
 exemple, on va utiliser la fonction "type" qui permet de

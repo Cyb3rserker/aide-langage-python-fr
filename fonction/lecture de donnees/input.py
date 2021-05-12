@@ -25,12 +25,17 @@ la sortie au terminal est :
 """
 Le fait que la fonction input revoie une chaîne de caractères peut poser problème si
 on veut faire des opérations ou autres, et c'est pour ça que l'on utilise les casts
-qui sont expliquées dans aide/donnee/variable.py . Donc pour affecter directement le
+qui sont expliquées dans aide/donnee/cast.py . Donc pour affecter directement le
 type de donnée que l'on veut à une variable, on fait cela :
 """
 
 age_utilisateur2 = int(input("Veuillez saisir votre âge à nouveau :"))
 # (input renvoie un str et int le convertie en int, donc age_utilisateur2 est un int)
+"""
+On peut aussi utiliser cette méthode :
+age_utilisateur2 = input("Veuillez saisir votre âge à nouveau :")
+age_utilisateur2 = int(age_utilisateur2)
+"""
 
 annee_naissance_utilisateur_2021 = 2021 - age_utilisateur2
 

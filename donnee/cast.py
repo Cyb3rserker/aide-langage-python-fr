@@ -27,6 +27,29 @@ Le double de l'âge de la majorité est 36 ans.
 """
 
 """
+Le cast est aussi utile lorsque l'on utilise la fonction input qui renvoie une chaîne de
+caractères (détails dans aide/focntion/lecture de donnees/input.py) :
+"""
+age_utilisateur = input("Quel est votre âge ? ")
+print(age_utilisateur, type(age_utilisateur))
+
+age_utilisateur = int(age_utilisateur)
+print(age_utilisateur, type(age_utilisateur))
+
+"""
+sortie au terminal pour 15 choisi :
+
+Quel est votre âge ? 15
+15 <class 'str'>
+15 <class 'int'>
+"""
+
+"""
+Maintenant, la variable "age_utilisateur" est égale à l'équivalent en nombre entier du texte
+que contenant la variable age_utilisateur avant.
+"""
+
+"""
 Il existe autant de cast que de type de donnée comme :
 - int(),
 - float(),

@@ -136,6 +136,11 @@ phrase = "Je suis une phrase."
 
 for letter in phrase :
     print(letter)
+"""
+En pseudo-code, cela signifie : 
+pour chaque élément de la phrase, donc les caractères, tu me 
+les affichera.
+"""
 
 """
 sortie au terminal :

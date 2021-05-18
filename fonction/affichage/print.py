@@ -101,3 +101,54 @@ Cela affichera :
 <class 'int'>
 <class 'int'>
 """
+
+print("_____CHANGEMENT DE END_____")
+"""
+Ceux qui ont fait du c et du c++ se sont rendu compte que le retour à la ligne se fait 
+automatiquement, sans avoir à préciser \n. En fait, la fonction print a un argument 
+"end" qui est la fin de la chaîne de caractères à afficher et qui a "\n" comme 
+valeur par défaut (voir aide/fonction/fonctions.py). On peut donc préciser la valeur 
+de cette arguement pour empêcher le retour à la ligne automatique. Pour l'exemple, on 
+va lister tout les nombres divisibles par 7 entre 0 et 100 non inclu et tout ça sur la 
+même ligne. On aurai donc habituelement fait comme ceci :
+"""
+
+for i in range(0, 100) : 
+    if i % 7 == 0 :
+        print(i, ",")
+
+"""
+sortie au terminal :
+
+0 ,
+7 ,
+14 ,
+21 ,
+28 ,
+35 ,
+42 ,
+49 ,
+56 ,
+63 ,
+70 ,
+77 ,
+84 ,
+91 ,
+98 ,
+
+Ce n'est pas ce qu'on veut faire, donc on va changer la valeur de end, car 
+il est égal à "\n" pour l'instant :
+"""
+
+for i in range(0, 100) : 
+    if i % 7 == 0 :
+        print(i, ",", end = ' ')
+        # C'est un espace.
+
+"""
+sortie au terminal :
+
+0 , 7 , 14 , 21 , 28 , 35 , 42 , 49 , 56 , 63 , 70 , 77 , 84 , 91 , 98 ,
+
+On a donc bien ce qu'on voulais au départ.
+"""

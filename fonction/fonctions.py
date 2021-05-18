@@ -88,7 +88,7 @@ Médoune : Salut tout le monde
 Doge : Salut
 """
 
-print("\n_____FONCTION AVEC PARAMETRE OPTIONNEL______\n")
+print("\n_____FONCTION AVEC PARAMETRE PAR DEFAUT_____\n")
 
 """
 On peut définir des fonctions avec des paramètres 
@@ -128,6 +128,7 @@ si on ne connaît qu'un des paramètres. Heureusement, en python, on
 peut renseigner les arguments dans le désodre, mais en précisant à 
 quoi ils correspondent. Voici un exemple :
 """
+print("\n_____PARAMETRE DANS LE DESORDRE_____\n")
 
 """
 Je veux collecter des informations avec le prénom, l'âge et la 
@@ -156,6 +157,8 @@ Ce qui n'est pas du tout ce que l'on veut. On va alors préciser à
 quel argument correspond quel valeur :
 """
 
+print()
+# (Pour plus de clareté dans le terminal)
 save_identite(nom = "Lefevre", taille = "1.86 m")
 
 """
@@ -169,6 +172,7 @@ On peut donc voir qu'en précisant quel valeur correspond à quel
 argument optionnel qu'on obtient quelque chose de cohérent à la fin.
 """
 
+print("\n_____NOMBRE D'ARGUMENTS VARIABLE_____\n")
 """
 En python, on définir des fonctions qui n'ont pas un nombre défini 
 d'argument. En effet, dans ce genre de fonction, on peut avoir 1 
@@ -188,7 +192,30 @@ l'utiliser :
 """
 
 # Cela marche aussi bien avec un argument :
+print("(1 ARGUMENT)")
 affichage_personnel("Nicole")
 
 # Qu'avec 5 arguments :
+print()
+print("(5 ARGUMENT)")
 affichage_personnel("Thérèse", "Marcelle", "Bertrand", "René", "Robert")
+
+print("\n_____RETOUR FONCTION_____\n")
+"""
+Comme dit plus tôt, les fonctions peuvent avoir des retours et on 
+peut s'en servir. Voici un exemple avec la syntaxe qui va avec :
+"""
+
+# On va faire une fonction qui retourne le carré du nombre en argument :
+
+def retour_carre(nombre) :
+    carre_nombre = nombre * nombre
+    # On utilise alors le mot clé return :
+    return carre_nombre
+    # Dès que la fonction retourne une valeur, elle s'arrête.
+
+# Maintenant que ma fonction retourne un résultat, je peux l'expoloiter :
+
+carre_douze = retour_carre(12)
+
+print("Le carré de 12 est", carre_douze)

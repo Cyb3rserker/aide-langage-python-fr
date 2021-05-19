@@ -3,10 +3,11 @@
 """
 En python, il y a ce qu'on appel des modules, c'est à dire des 
 fichiers comprenant des fonctions n'étant pas native du langage 
-(~= fonction par défaut on va dire). Pour les adeptes du language 
-c, c'est comme des bibliothèques. Pour l'exemple, on va utiliser 
-la fonction sqrt qui permet de calculer la racine carré du 
-nombre en argument (square root) :
+(~= fonctions par défaut on va dire). Pour les adeptes du language 
+c, c'est comme des bibliothèques. Il existe des documentations de 
+module précisant quelle fonction fait quoi et comment l'utiliser.
+Pour l'exemple, on va utiliser la fonction sqrt qui permet de 
+calculer la racine carré du nombre en argument (square root) :
 """
  
 """
@@ -56,4 +57,20 @@ sortie au terminal :
 Même sans les lignes du dessus, le programme aurai tout aussi bien 
 marcher, et en plus sans la nécessité de préciser le nom du module 
 avant utilisation de la fonction sqrt.
+Si on va utiliser un grand nombre de fonctions d'un module et 
+qu'on ne veut pas préciser le nom du module avant chaque utilisation 
+de fonction, on peut simplement mettre cette ligne :
 """
+
+from math import *
+# Tu importes toutes (*) les fonctions du module math
+
+"""
+On peut aussi utiliser cette syntaxe et quand même préciser le nom 
+du module avant la fonction pour ne pas avoir des conflits de nom 
+semblable 
+(ex : menu_principal.afficher_menu /= menu_pause.afficher_menu)
+ou bien même savoir quel module a été utile où.
+"""
+
+# La suite sur 

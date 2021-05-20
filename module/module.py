@@ -73,4 +73,7 @@ semblable
 ou bien même savoir quel module a été utile où.
 """
 
-# La suite sur 
+"""
+On peut aussi créer nos propres modules 
+(suite dans aide/module/création module)
+"""

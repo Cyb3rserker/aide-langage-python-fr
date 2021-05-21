@@ -85,24 +85,35 @@ try :
     resultat = age_user / diviseur
     print("{} / {} = {}".format(age_user, diviseur, resultat))
 
-"""
-On sait donc que les erreurs qui peuvent survenir sont :
-- une division par zero si l'utilisateur rentre 0 pour le diviseur,
-- une erreur de valeur si l'utilisateur ne rentre pas de chiffre.
-
-On peut donc commencer à prendre nos mesures en précisant 
-nous même les types d'erreurs que l'on a listé et en cumulant 
-les except :
-"""
+# On sait donc que les erreurs qui peuvent survenir sont :
+# - une division par zero si l'utilisateur rentre 0 pour le diviseur,
+# - une erreur de valeur si l'utilisateur ne rentre pas de chiffre.
+# 
+# On peut donc commencer à prendre nos mesures en précisant 
+# nous même les types d'erreurs que l'on a listé et en cumulant 
+# les except :
 
 # Chaque type d'erreurs à son code, et on peut l'utiliser :
+except ValueError :
+    print("Vous n'avez pas enter les bonnes valeurs !")
 except ZeroDivisionError :
 # Par exemple ici, la division par zéro.
     print("Vous ne pouvez pas diviser par 0 !")
-except ValueError :
-    print("Vous n'avez pas enter les bonnes valeurs !")
 except :
 # On met un dernier except pour d'autres types d'erreurs que l'on aurait oubliées
-    print("Valeur incorrectes !")
+    print("Valeur incorrecte !")
 finally :
     print("\nFin du programme.\n")
+
+"""
+On n'est pas obligé de retenir les noms de tous les types 
+d'exeptions mais en voici certains :
+(Je pense que je vais étoffer la liste au fil du temps)
+
+- ValueError
+- NameError si on indique une variable qui n'existe pas
+- TypeError pour des problèmes de types de variables
+- ZeroDivisionError si on divise par 0
+- OSError s'il y a des problème avec le système
+- AssertionError
+"""

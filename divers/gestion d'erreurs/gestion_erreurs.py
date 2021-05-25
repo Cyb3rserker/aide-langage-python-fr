@@ -1,5 +1,7 @@
 #coding:utf-8
 
+import sys
+
 """
 La gestion d'erreur est nécessaire pour perfectionner 
 notre programme et prendre toutes les précautions pour 
@@ -116,4 +118,66 @@ d'exeptions mais en voici certains :
 - ZeroDivisionError si on divise par 0
 - OSError s'il y a des problème avec le système
 - AssertionError
+- KeyboardInterrupt pour une interruption du programme 
+avec ctrl + c 
+
+On peut aussi créer nos propres types d'exeption, mais 
+je ne peux rien dire pour l'instant car je ne sais pas 
+comment faire.
+
+On peut afficher nous même des erreurs en utilisant le 
+mot clé raise :
 """
+
+print("\n_____RAISE_____")
+print("(Pas de sécurité sur le cast)\n")
+
+nombre = int(input("Nombre : "))
+diviseur = int(input("Diviseur : "))
+# Je ne fais pas de vérification de cast car là je me 
+# concentre sur le raise.
+
+if diviseur == 0 :
+    # On met le code de l'erreur puis, si on veut, un 
+    # message supplémentaire. 
+    raise ZeroDivisionError("Vous avez entré un diviseur nul !")
+
+else :
+    resultat = nombre / diviseur
+    print("{} / {} = {}".format(nombre, diviseur, resultat))
+
+"""
+sortie au terminal :
+
+Nombre : 9
+Diviseur : 0
+Traceback (most recent call last):
+  File "...\aide\divers\gestion d'erreurs\gestion_erreurs.py", line 141, in <module>
+    raise ZeroDivisionError("Vous avez entré un diviseur nul !")
+ZeroDivisionError: Vous avez entré un diviseur nul !
+"""
+
+"""
+L'une des dernières notions est l'assertion. Le mot clé 
+assert permet de vérifier une condition en précisant un 
+message d'erreur. Une erreur d'assertion est considérée 
+comme une exception donc on peut l'utiliser dans un 
+except :
+"""
+
+print("\n_____ASSERT_____")
+print("(Pas de vérification pour le cast)\n")
+
+age_limite = 18
+
+try :
+    age_user = int(input("Veuillez enter votre âge : "))
+
+    assert age_user > age_limite
+    # Si la condition est vrai, il n'y a pas d'erreur
+except AssertionError :
+    print("Vous n'avez pas l'âge requis pour continuer le programme.")
+    sys.exit()
+    # On quitte le programme
+
+print("Si vous voyez ce message, c'est que vous avez accès au programme.")

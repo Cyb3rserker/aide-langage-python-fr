@@ -67,7 +67,12 @@ class LancePierre :
 
     On peut rajouter des informations au fur et à mesure du 
     développement.
+    
+    On peut aussi faire des variables qui sont propres à des classes et 
+    pas des objets :
     """
+
+    nombre_lance_pierre = 0
 
     def __init__(self): 
         print("Fabrication d'un lance pierre...")
@@ -83,6 +88,8 @@ class LancePierre :
         self.taille_baton = "MOYEN"
         self.couleur_corde = "ROUGE"
         self.projectile = "CAILLOU"
+
+        LancePierre.nombre_lance_pierre += 1
 
 """
 Maintenant que l'on a notre plan de conception, on va pouvoir 
@@ -110,10 +117,12 @@ de lance_pierre_1 pour pouvoir l'afficher. Je vais devoir faire :
 """
 
 print("taille baton lance_pierre_1 -> {}".format(lance_pierre_1.taille_baton))
+print("Nombre lance pierre : {}".format(LancePierre.nombre_lance_pierre))
 """
 sortie au terminal :
 
 taille baton lance_pierre_1 : MOYEN
+Nombre lance pierre : 2
 """
 
 """

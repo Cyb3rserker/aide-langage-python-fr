@@ -19,6 +19,9 @@ Les différents mots clés sont :
 
 
 Voici un exemple d'utilisation avec un lance-pierre :
+(ATTENTION ! Exceptionnellement, je vais définir les classes au 
+fur et à mesure du programme et pas au tout début pour avoir plus 
+de clareté dans les explications des différentes notions.
 """
 
 # Pour définir une classe, on utilise cette syntaxe :
@@ -69,7 +72,12 @@ class LancePierre :
     développement.
     
     On peut aussi faire des variables qui sont propres à des classes et 
-    pas des objets :
+    pas des objets. Pour y accéder, soit on renseigne le nom de 
+    l'objet puis le nom de l'attribut de classe, soit on renseigne le 
+    nom de la classe directement puis le nom de l'attribut ex :
+
+    lance_pierre_1.nombre_lance_pierre
+    LancePierre.nombre_lance_pierre
     """
 
     nombre_lance_pierre = 0
@@ -153,7 +161,7 @@ Pour illustrer ceci, je vais créer une class personnage :
 class Personnage :
     # Il faut toujours mettre le self en premier et il ne sera pas 
     # compté dans l'ordre de la saisie des paramètres.
-    def __init__(self, c_nom = "_DEFAUT_", c_taille_cm = "170", c_force = "50") :
+    def __init__(self, c_nom = "_DEFAUT_", c_taille_cm = 170, c_force = 50) :
     # Je met c_ devant les paramètres pour qu'on sache que ce sont des 
     # paramètres de classe et j'ai aussi mis des paramètres par défaut.
     # On peut aussi renseigner les arguments dans le désordre lors d'une 

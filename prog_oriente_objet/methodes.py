@@ -24,6 +24,7 @@ les exemples que je vais présenter.
 """
 
 # METHODES :
+print("\n_____METHODES CLASSIQUES_____\n")
 
 class LancePierre :
     # ici exceptionnellement, je n'ai pas mis de documentation 
@@ -79,6 +80,7 @@ Autre joueur touché ! Quelle précision !
 """
 
 # METHODE DE CLASSE :
+print("\n_____METHODES DE CLASSE_____\n")
 
 """
 Les méthodes de classe sont des fonctions qui n'auront pas un impact 
@@ -138,4 +140,62 @@ Force : 1000
 
 Race des joueurs présent dans la partie : Humain
 Race des joueurs présent dans la partie : Cyborg
+"""
+
+
+# METHODES STATIQUES : 
+print("\n_____METHODES STATIQUES_____\n")
+
+"""
+Les méthodes statiques sont des méthodes qui sont liées à une 
+classe, mais qui sont indépendante de celle-ci. Cela permet de les 
+catégoriser pour avoir un programme organisé. Pour l'exemple, je vais 
+faire une classe qui rassemble les méthodes en rapport avec des 
+annonces sur un chat général :
+"""
+
+class AnnonceSurChat :
+    def serveur_en_maintenance(c_heure_debut_maintenance, c_heure_fin_maintenance) :
+        print("\nLe serveur sera en maintenance de {}h à {}h.\n".format(c_heure_debut_maintenance, c_heure_fin_maintenance))
+
+    serveur_en_maintenance = staticmethod(serveur_en_maintenance)
+    # On utilise cette syntaxe, comme pour les méthodes de classes
+
+    def serveur_plus_en_maintenance() :
+        print("\nLe serveur n'est plus en maintenance.\n")
+
+    serveur_plus_en_maintenance = staticmethod(serveur_plus_en_maintenance)
+
+    def arrivee_nouveau_membre(c_nom_nouveau_membre) :
+        print("\n{} vient de rejoindre le chat !\n".format(c_nom_nouveau_membre))
+
+    arrivee_nouveau_membre = staticmethod(arrivee_nouveau_membre)
+
+    def depart_membre(c_nom_membre_parti) :
+        print("{} vient de quitter le chat.\n".format(c_nom_membre_parti))
+
+    depart_membre = staticmethod(depart_membre)
+
+
+"""
+Ces définitions de méthodes statiques me permettent de les
+catégoriser lors de l'écriture du code source :
+"""
+AnnonceSurChat.serveur_en_maintenance(14, 17)
+AnnonceSurChat.serveur_plus_en_maintenance()
+AnnonceSurChat.arrivee_nouveau_membre("xX_NoobSlayer999_Xx")
+AnnonceSurChat.depart_membre("xX_NoobSlayer999_Xx")
+
+"""
+sortie au terminal :
+
+Le serveur sera en maintenance de 14h à 17h.
+
+
+Le serveur n'est plus en maintenance.
+
+
+xX_NoobSlayer999_Xx vient de rejoindre le chat !
+
+xX_NoobSlayer999_Xx vient de quitter le chat.
 """

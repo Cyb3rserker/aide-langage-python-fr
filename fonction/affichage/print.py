@@ -77,7 +77,16 @@ du texte et autres en utilisant cette syntaxe (je reviendrai sûrement pour mieu
 syntaxe) :
 """
 print("L'age de la majorité est {} ans en France et pas {} ans".format(age_majorite, pas_age_majorite))
-# Les accolades seront remlacés par les variables
+# Les accolades seront remlacés par les variables.
+"""
+A partir de python 3.6, on peut utiliser une syntaxe beaucoup 
+compréhensible pour afficher des variables dans une chaîne de 
+caractères :
+"""
+print("(Avec la nouvelle syntaxe : )")
+# On met f pour montrer que l'on fait un formatage puis 
+# on met le nom des variables dans les accolades :
+print(f"L'age de la majorité est {age_majorite} ans en France et pas {pas_age_majorite} ans")
 
 # On peut aussi le faire avec des variables de textes :
 

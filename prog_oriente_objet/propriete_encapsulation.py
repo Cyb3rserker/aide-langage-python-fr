@@ -6,28 +6,31 @@ Les propriétés permettent de manipuler les attributs des classes.
 
 """
 
-class Chien :
-    """
-    documentation :
-    - c_race : ce que l'on veut
-    - c_taille :
-        - "PETIT"
-        - "MOYEN"
-        - "GRAND"
-    """
+# Je met la prochaine partie en commentaire pour ne pas avoir à 
+# recréer une nouvelle classe pour la suite du programme.
 
-    def __init__(self, c_race, c_taille) :
-        print("\nGénération d'un chien...")
-        self.race = c_race
-        self.taille = c_taille
-        print("Chien généré !\n\nRace : {}\nTaille :{}\n".format(c_race, c_taille))
-
-
-chien_1 = Chien("Bulldog", "MOYEN")
-
-print("Race du chien n°1 :", chien_1.race)
-chien_1.race = "Rottweiler"
-print("Race du chien n°1 :", chien_1.race)
+#class Chien :
+#    """
+#    documentation :
+#    - c_race : ce que l'on veut
+#    - c_taille :
+#        - "PETIT"
+#        - "MOYEN"
+#        - "GRAND"
+#    """
+#
+#    def __init__(self, c_race, c_taille) :
+#        print("\nGénération d'un chien...")
+#        self.race = c_race
+#        self.taille = c_taille
+#        print("Chien généré !\n\nRace : {}\nTaille :{}\n".format(c_race, c_taille))
+#
+#
+#chien_1 = Chien("Bulldog", "MOYEN")
+#
+#print("Race du chien n°1 :", chien_1.race)
+#chien_1.race = "Rottweiler"
+#print("Race du chien n°1 :", chien_1.race)
 """
 sortie au terminal :
 
@@ -45,4 +48,33 @@ Comme on a pu le voir au dessus, j'ai pu accéder sans problème à
 l'attribut "race" de l'objet chien_1 en affichant sa race et en 
 la modifiant. Normalement, il faut interdire ce genre d'accès 
 aux attributs et pour cela, on utilise ce qu'on appelle des 
-accesseurs. 
+accesseurs. Les accesseurs sont comme des cages qui contiennent 
+les attributs ce qui empêche d'y avoir accès. 
+"""
+
+class Chien :
+    """
+    documentation :
+    - c_race : ce que l'on veut
+    - c_taille :
+        - "PETIT"
+        - "MOYEN"
+        - "GRAND"
+    """
+
+    def __init__(self, c_race, c_taille) :
+        print("\nGénération d'un chien...")
+        # Par convention, on représente les attributs non accessibles
+        # avec un underscore _ avant leurs noms. Comme dit, c'est une 
+        # convention donc ça n'a aucune incidence sur le déroulemment du 
+        # programme.
+        self._race = c_race
+        self._taille = c_taille
+        print("Chien généré !\n\nRace : {}\nTaille :{}\n".format(c_race, c_taille))
+
+
+chien_1 = Chien("Bulldog", "MOYEN")
+
+print("Race du chien n°1 :", chien_1.race)
+chien_1.race = "Rottweiler"
+print("Race du chien n°1 :", chien_1.race)

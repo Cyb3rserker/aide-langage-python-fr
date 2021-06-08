@@ -153,6 +153,7 @@ for i in range(0, 100) :
     if i % 7 == 0 :
         print(i, ",", end = ' ')
         # C'est un espace.
+print()
 
 """
 sortie au terminal :
@@ -160,4 +161,24 @@ sortie au terminal :
 0 , 7 , 14 , 21 , 28 , 35 , 42 , 49 , 56 , 63 , 70 , 77 , 84 , 91 , 98 ,
 
 On a donc bien ce qu'on voulais au départ.
+"""
+
+"""
+On peut aussi écrire du texte qui aura la même forme dans le 
+terminal et dans le code :
+"""
+
+# On utilise les trois gillemets ''' :
+print('''Je suis
+un paragraphe qui aura 
+exactement la même forme dans 
+le code et dans le terminal.''')
+
+"""
+sortie au terminal :
+
+Je suis
+un paragraphe qui aura
+exactement la même forme dans
+le code et dans le terminal.
 """

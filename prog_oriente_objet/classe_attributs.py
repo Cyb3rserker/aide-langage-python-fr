@@ -10,12 +10,11 @@ Un objet est un "exemplaire", une instance d'une classe
 Les différents mots clés sont :
 
     - class    : permet de définir une classe
-    - __init__ : mot clé qui désigne le "constructeur" de 
-                 la méthode
+    - __init__ : mot clé qui désigne le "constructeur" d'une 
+                instance de la classe
     - self     : en argument de méthode, permet d'identifier 
-                 l'objet que l'on est en train de créer, de 
-                 le retourner et de lui appliquer ladite 
-                 méthode en lui même et de le retourner
+                 l'objet que l'on est en train de créer pour lire 
+                 ses attributs, les manipuler etc
 
 
 Voici un exemple d'utilisation avec un lance-pierre :

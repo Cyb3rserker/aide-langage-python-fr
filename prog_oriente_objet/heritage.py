@@ -31,6 +31,9 @@ class Animal :
 
     def annonce_nom_animal(self) :
         print(f"Nom : {self.nom}")
+    
+    def manger(self) :
+        print(f"{self.nom} mange.")
 
 """
 Dans la définition d'une classe fille, on met le nom de la classe 
@@ -39,7 +42,7 @@ une sorte de Animal ou encore que Animal est la super classe de
 Chien. La classe fille possède tous les attributs et méthodes de 
 sa super classe, et donc dans notre cas la classe Chien possède 
 non seulement les attributs race et taille, mais aussi les 
-attributs nom et etat et de la méthode description_etat_animal. Il
+attributs nom et etat et de toutes les méthodes relative à Animal. Il
 est aussi possible d'avoir une classe petite fille, arrière petite 
 fille etc mais je ne pense pas que je vais le montrer dans ce fichier 
 car le principe reste le même.
@@ -122,6 +125,8 @@ class Chien(Animal) :
 
 # Programme principal :
 
+print("\n_____CLASSE MERE ET FILLE_____\n")
+
 animal_1 = Chien("Médor", "DOCILE", "golden retriever", "GRAND")
 animal_2 = Animal("Mia", "DOCILE")
 
@@ -149,4 +154,30 @@ différent pour ces objets de classe différentes.
 """
 On peut donc créer des classes filles autant que l'on veut. J'aurais pu 
 faire une classe Chat, Dauphin, Lezard etc.
+"""
+
+"""
+On peut aussi avoir une classe fille qui hérite de plusieurs 
+classe mère :
+"""
+
+class Eleve :
+    # On met pass quand la classe n'a ni attribut, 
+    # ni méthode.
+    pass
+
+class Adolescent :
+    pass
+
+class Lyceen(Eleve, Adolescent) :
+    """
+    Ici, Lyceen est une classe fille de Eleve et de 
+    Adolescent et si ces deux classes avait des méthodes 
+    et des constructeur, Lyceen en aurait hériter
+    """
+    pass
+
+print("\n_____FONCTIONS D'HERITAGE_____\n")
+""" 
+Les classe 
 """

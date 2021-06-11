@@ -150,3 +150,92 @@ différent pour ces objets de classe différentes.
 On peut donc créer des classes filles autant que l'on veut. J'aurais pu 
 faire une classe Chat, Dauphin, Lezard etc.
 """
+
+"""
+Il existe aussi quelques fonctions qui concernent les classes et 
+qui sont très utile en programmation orienté objet. Je vais donner 
+l'explications de chaque fonction, puis un exemple, puis encore une 
+autre fonction :
+"""
+
+print("\n_____DIFFERENTES FONCTIONS UTILES :_____")
+
+print("\n___ISINSTANCE___\n")
+"""
+- isinstance(<variable_ou_objet_a_verfier>, <classe>) :
+    cette fonction permet de vérifier si une variable est une 
+    instance de la classe renseignée. Cette fonction revoie une valeur 
+    booléenne, soit True soit False.
+"""
+
+
+print("Est-ce que animal_1 est un objet de la classe Chien ?")
+
+if (isinstance(animal_1, Chien)) == True :
+    print("Oui.")
+elif (isinstance(animal_1, Chien)) == False :
+    print("Non.")
+"""
+sortie au terminal :
+
+_____DIFFERENTES FONCTIONS UTILES :_____
+
+___ISINSTANCE___
+
+Est-ce que animal_1 est un objet de la classe Chien ?
+Oui.
+"""
+
+"""
+Cela marche aussi avec des super classes car, en soit, les objets 
+de la classe fille sont juste des objets de la classe mère mais avec
+des fonctionnalités en plus. D'ailleurs, on peut le comprendre car 
+il y a le constructeur de la classe mère dans une classe fille.
+"""
+
+print("Est-ce que animal_1 est un objet de la classe Animal ?")
+
+if (isinstance(animal_1, Animal)) == True :
+    print("Oui.")
+elif (isinstance(animal_1, Animal)) == False :
+    print("Non.")
+"""
+sortie au terminal :
+
+Est-ce que animal_1 est un objet de la classe Animal ?
+Oui.
+"""
+
+print("\n___ISSUBCLASS___\n")
+"""
+- issubclass(<présumée_class_fille>, <présumée_class_mere>) :
+    Cette fonction permet de vérifier si une classe est bien 
+    fille d'une autre classe. Elle renvoie aussi une valeur 
+    booléenne.
+"""
+
+print("Est-ce que la classe Animal est une classe fille de la classe Chien ?")
+
+if issubclass(Animal, Chien) == True :
+    print("Oui.")
+elif issubclass(Animal, Chien) == False :
+    print("Non.")
+
+print("Est-ce que la classe Chien est une classe fille de la classe Animal ?")
+
+if issubclass(Chien, Animal) == True :
+    print("Oui.")
+elif issubclass(Chien, Animal) == False :
+    print("Non.")
+
+
+"""
+Sortie au terminal :
+
+___ISSUBCLASS___
+
+Est-ce que la classe Animal est une classe fille de la classe Chien ?
+Non.
+Est-ce que la classe Chien est une classe fille de la classe Animal ?
+Oui.
+"""

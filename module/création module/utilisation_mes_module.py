@@ -48,3 +48,8 @@ modules communs.
 """
 
 module_loin.calcul_age_user()
+
+"""
+Je vais faire les précisions sur les tests des fonctions dans le 
+module mon_module.py.
+"""

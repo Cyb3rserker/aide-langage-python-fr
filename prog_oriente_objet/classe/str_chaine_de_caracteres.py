@@ -128,3 +128,99 @@ la chaîne, la méthode title qui met chaque début de mot en majuscule.
 Je ne vais pas montrer ces méthodes car cela allongerait le code pour 
 rien car ce sont des méthodes très simple.
 """
+
+"""
+La méthode center permet de centrer du texte sur le terminal en affichant
+une chaine de caractère plus longue que l'initial, et l'initial sera 
+entre des caractères de remplissage. Voici sa définition :
+
+str.center(<largeur du texte>, <caractères de remplissage>)
+"""
+
+print("\n_____CENTER_____\n")
+print(chaine_de_caracteres.center(50, "_"))
+
+"""
+sortie au terminal :
+
+_____CENTER_____
+
+________je suis une chaîne de caractères._________
+
+On peut voir que la ligne fait 50 cases de long et que les cases qui 
+ne sont pas remplies par les caractères de ma phrases sont remplacées 
+par des _, car je les ai renseignés dans les paramètres de la méthode.
+Je vais d'ailleurs utiliser cette technique pour la mise en forme des 
+titres dans le terminal.
+"""
+
+"""
+On a aussi la méthodes find qui permet de chercher dans une chaîne de 
+caractères :
+
+str.find(<chaîne à trouver>, <début de la chaîne>, <fin>) 
+
+Elle retourne l'indicee (= l'emplacement) du premier caractère qui 
+correspond à la chaîne précisée dans les paramètres et si elle ne 
+la trouve pas, elle retourne -1. D'ailleurs, la méthodes est sensible
+à la casse, c'est à dire qu'il faut être rigoureux avec les majuscules.
+(note : les ordinateurs commencent à compter à partir de 0, donc 
+si ma chaîne à trouver commence dès le premier caractère de l'initial,
+l'indice sera de 0.)
+"""
+
+print()
+print("FIND".center(50, "*"))
+print()
+
+print("Indice de 'une' dans 'je suis une chaîne de caractères' : \
+", chaine_de_caracteres.find("une"))
+
+print("Indice de 'une' dans 'je suis une chaîne de caractères' : \
+", chaine_de_caracteres.find("Je"))
+
+"""
+sortie au terminal :
+
+***********************FIND***********************
+
+Indice de 'une' dans 'je suis une chaîne de caractères' :  8
+Indice de 'Je' dans 'je suis une chaîne de caractères' :  -1
+
+
+On peut donc voir que 'une' se situe à l'indice 8 de notre chaîne et 
+que 'Je' n'est pas dans la chaîne.
+"""
+
+"""
+La méthode index est pareil, sauf qu'elle engendre une ValueError :
+"""
+
+print()
+print("INDEX".center(50, "*"))
+print()
+
+try :
+    chaine_de_caracteres.index("une")
+except ValueError :
+    print("Je n'ai pas trouvé 'une' dans 'je suis une chaîne de caractères'.")
+else :
+    print("Indice de 'une' dans 'je suis une chaîne de caractères' : \
+", chaine_de_caracteres.index("une"))
+
+try :
+    chaine_de_caracteres.index("Je")
+except ValueError :
+    print("Je n'ai pas trouvé 'Je' dans 'je suis une chaîne de caractères'.")
+else :
+    print("Indice de 'Je' dans 'je suis une chaîne de caractères' : \
+", chaine_de_caracteres.index("Je"))
+
+"""
+sortie au terminal :
+
+**********************INDEX***********************
+
+Indice de 'une' dans 'je suis une chaîne de caractères' :  8
+Je n'ai pas trouvé 'Je' dans 'je suis une chaîne de caractères'.
+"""

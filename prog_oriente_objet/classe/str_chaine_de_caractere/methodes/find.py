@@ -3,8 +3,11 @@
 La méthode find permet de chercher une chaîne de caractères 
 dans une autre chaîne de caractères :
 
-str.find(<chaîne à trouver>, <début de la chaîne>, <fin>) 
+str.find(<chaîne à trouver>, <index du début de la recherche>, <index fin>) 
 
+Les deux derniers agruments ne sont pas obligatoire, ils permettent  
+juste de définir un endroit où débuter la recherche et un autre où 
+arrêter la recherche.
 Elle retourne l'indice (= l'emplacement) du premier caractère qui 
 correspond à la chaîne précisée dans les paramètres et si elle ne 
 la trouve pas, elle retourne -1. D'ailleurs, la méthodes est sensible

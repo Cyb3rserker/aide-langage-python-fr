@@ -22,7 +22,7 @@ Je_suis_une_chaîne_de_caractères.
 """
 
 """
-Je vais maintenant remplacer tout les e par un E 3 fois :
+Je vais maintenant remplacer tous les e par un E 3 fois :
 """
 
 print(chaine_de_caracteres.replace("e", "E", 3))

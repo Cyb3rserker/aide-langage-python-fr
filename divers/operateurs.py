@@ -14,6 +14,10 @@ classiques. Les différents opérateurs en python, et dans la programmation en g
         pas par exemple :
         si ma_variable % 2 n'est pas égal à 0, alors...
         (le reste d'une division Euclidienne d'un nombre pair par 2 est forcément nul)
+    ** pour une puissance.
+       Exemple :
+            2 ** 3 = 8
+            10 ** 6 = 1 000 000
 
 On peut utiliser les opérateurs pour changer la valeurs d'une variables ) :
 """

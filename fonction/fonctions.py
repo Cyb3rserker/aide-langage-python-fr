@@ -12,7 +12,6 @@ caster des données pour int(), float(), etc. On peut
 voir les fonctions un peut comme une recette car on y 
 entre des informations, il y a une préparation et un 
 nouvel élément en sort, exemple : 
-
 on a pour ingrédient variable qui est égal à 5 :
 """
 variable = 5
@@ -68,7 +67,6 @@ afficher_bonjour()
 
 """
 sortie au terminal :
-
 Bonjour.
 """
 
@@ -83,7 +81,6 @@ envoyer_message("Doge", "Salut")
 
 """
 sortie au terminal :
-
 Médoune : Salut tout le monde
 Doge : Salut
 """
@@ -100,10 +97,8 @@ Voici un exemple :
 # envoyer_message("Médoune")
 """
 sortie au terminal :
-
 TypeError: envoyer_message() missing 1 required positional 
 argument: 'message_envoyeur'
-
 On peut voir que l'interpréteur python me dit qu'un 
 argument manque lors de l'appel de la fonction. C'est donc
 dans ces cas là que l'on défini des paramètres par 
@@ -117,10 +112,8 @@ envoyer_message_2("Médoune")
 
 """
 sortie au terminal :
-
 Administrateur : Pas de nouveau message
 Médoune : Pas de nouveau message
-
 On peut voir que le programme c'est déroulé correctement grâce aux 
 valeurs par défaut que l'on a définis. Tout ça c'est bien, mais si 
 dans cette situation on ne peut que renseigner le nom de l'envoyeur 
@@ -148,11 +141,9 @@ qu'il fait 1.86 m mais que celui-ci oublie de préciser son prénom :
 save_identite("Lefevre", "1.86 m")
 """
 la sortie au terminal sera donc ça :
-
 nom : Lefevre
 prenom : 1.86 m
 taille : inconnue
-
 Ce qui n'est pas du tout ce que l'on veut. On va alors préciser à 
 quel argument correspond quel valeur :
 """
@@ -163,11 +154,9 @@ save_identite(nom = "Lefevre", taille = "1.86 m")
 
 """
 la sortie au terminal sera donc ça :
-
 nom : Lefevre
 prenom : inconnu
 taille : 1.86 m
-
 On peut donc voir qu'en précisant quel valeur correspond à quel 
 argument optionnel qu'on obtient quelque chose de cohérent à la fin.
 """
@@ -185,7 +174,6 @@ def affichage_personnel(*liste_personnel) :
 """
 On met une étoile pour signifier que le nombre d'argument n'est 
 pas défini.
-
 La boucle va donc parcourir toute la liste du personnel, et donc 
 tout les arguments que l'on aura spécifiés. On peut maintenant 
 l'utiliser :

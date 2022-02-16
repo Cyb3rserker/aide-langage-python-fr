@@ -5,6 +5,8 @@ Une fonction lamba est une fonction qui retourne le resultat d'une
 seule instruction ou n'execute qu'une seule instruction. Je n'ai 
 pas encore trouvé de réelle utilité, mais celle que je vois là 
 est d'occuper beaucoup moins de ligne de code.
+(note : on ne peut pas faire d'assignation avec lamba 
+ex : add_zero = lamba : suite = suite + "0")
 """
 
 print("\n_____FONCTION LAMBA SANS ARGUMENTS_____\n")
